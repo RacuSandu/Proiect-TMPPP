@@ -26,3 +26,4 @@ D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\refint\CarRentalSystem.dll
 D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.pdb
 D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.genruntimeconfig.cache
 D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\ref\CarRentalSystem.dll
+D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.sourcelink.json
