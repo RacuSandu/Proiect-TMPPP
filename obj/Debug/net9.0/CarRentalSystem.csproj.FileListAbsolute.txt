@@ -1,0 +1,28 @@
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\bin\Debug\net9.0\CarRentalSystem.exe
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\bin\Debug\net9.0\CarRentalSystem.deps.json
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\bin\Debug\net9.0\CarRentalSystem.runtimeconfig.json
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\bin\Debug\net9.0\CarRentalSystem.dll
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\bin\Debug\net9.0\CarRentalSystem.pdb
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.AssemblyInfoInputs.cache
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.AssemblyInfo.cs
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.csproj.CoreCompileInputs.cache
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.dll
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\refint\CarRentalSystem.dll
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.pdb
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.genruntimeconfig.cache
+C:\Users\sandu\OneDrive\Documents\Anul III\Semestrul II\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\ref\CarRentalSystem.dll
+D:\Proiect TMPPP\CarRentalSystem\bin\Debug\net9.0\CarRentalSystem.exe
+D:\Proiect TMPPP\CarRentalSystem\bin\Debug\net9.0\CarRentalSystem.deps.json
+D:\Proiect TMPPP\CarRentalSystem\bin\Debug\net9.0\CarRentalSystem.runtimeconfig.json
+D:\Proiect TMPPP\CarRentalSystem\bin\Debug\net9.0\CarRentalSystem.dll
+D:\Proiect TMPPP\CarRentalSystem\bin\Debug\net9.0\CarRentalSystem.pdb
+D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.AssemblyInfoInputs.cache
+D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.AssemblyInfo.cs
+D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.csproj.CoreCompileInputs.cache
+D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.dll
+D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\refint\CarRentalSystem.dll
+D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.pdb
+D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\CarRentalSystem.genruntimeconfig.cache
+D:\Proiect TMPPP\CarRentalSystem\obj\Debug\net9.0\ref\CarRentalSystem.dll
