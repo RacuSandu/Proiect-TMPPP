@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Plati - Car Rental System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">🚗 Car Rental System</div>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="vehicles.html">Vehicule</a>
+            <a href="customers.html">Clienti</a>
+            <a href="contracts.html">Contracte</a>
+            <a href="payments.html" class="active">Plati</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Plati</h1>
+            <button class="btn btn-primary" onclick="showAddModal()">+ Proceseaza Plata</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID Plata</th>
+                    <th>Contract</th>
+                    <th>Suma</th>
+                    <th>Metoda</th>
+                    <th>Status</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody id="paymentsTable"></tbody>
+        </table>
+    </div>
+
+    <div id="addModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Proceseaza Plata</h2>
+                <button onclick="hideModal()" class="close-btn">✕</button>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Contract</label>
+                    <select id="paymentContract"></select>
+                </div>
+                <div class="form-group">
+                    <label>Suma (MDL)</label>
+                    <input type="number" id="paymentAmount" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label>Metoda</label>
+                    <select id="paymentMethod">
+                        <option>Cash</option>
+                        <option>Card</option>
+                        <option>BankTransfer</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="processPayment()">Proceseaza</button>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/payments.js"></script>
+</body>
+</html>

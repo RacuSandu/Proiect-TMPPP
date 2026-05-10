@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">🚗 Car Rental System</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="vehicles.html">Vehicule</a>
+            <a href="customers.html">Clienti</a>
+            <a href="contracts.html">Contracte</a>
+            <a href="payments.html">Plati</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">🚗</div>
+                <div class="stat-info">
+                    <h3 id="totalVehicles">-</h3>
+                    <p>Total Vehicule</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <h3 id="availableVehicles">-</h3>
+                    <p>Disponibile</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-info">
+                    <h3 id="totalCustomers">-</h3>
+                    <p>Clienti</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📋</div>
+                <div class="stat-info">
+                    <h3 id="totalContracts">-</h3>
+                    <p>Contracte</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-section">
+            <h2>Vehicule Disponibile</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Tip</th>
+                        <th>An</th>
+                        <th>Numar</th>
+                        <th>Tarif/zi</th>
+                    </tr>
+                </thead>
+                <tbody id="availableVehiclesTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

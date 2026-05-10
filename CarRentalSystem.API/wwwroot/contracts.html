@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Contracte - Car Rental System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">🚗 Car Rental System</div>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="vehicles.html">Vehicule</a>
+            <a href="customers.html">Clienti</a>
+            <a href="contracts.html" class="active">Contracte</a>
+            <a href="payments.html">Plati</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Contracte</h1>
+            <button class="btn btn-primary" onclick="showAddModal()">+ Contract Nou</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID Contract</th>
+                    <th>Client</th>
+                    <th>Vehicul</th>
+                    <th>Inceput</th>
+                    <th>Sfarsit</th>
+                    <th>Zile</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Actiuni</th>
+                </tr>
+            </thead>
+            <tbody id="contractsTable"></tbody>
+        </table>
+    </div>
+
+    <div id="addModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contract Nou</h2>
+                <button onclick="hideModal()" class="close-btn">✕</button>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Client</label>
+                    <select id="contractCustomer"></select>
+                </div>
+                <div class="form-group">
+                    <label>Vehicul</label>
+                    <select id="contractVehicle"></select>
+                </div>
+                <div class="form-group">
+                    <label>Data inceput</label>
+                    <input type="date" id="startDate">
+                </div>
+                <div class="form-group">
+                    <label>Data sfarsit</label>
+                    <input type="date" id="endDate">
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="createContract()">Creeaza Contract</button>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/contracts.js"></script>
+</body>
+</html>

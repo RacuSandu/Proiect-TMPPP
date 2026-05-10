@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicule - Car Rental System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">🚗 Car Rental System</div>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="vehicles.html" class="active">Vehicule</a>
+            <a href="customers.html">Clienti</a>
+            <a href="contracts.html">Contracte</a>
+            <a href="payments.html">Plati</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Vehicule</h1>
+            <button class="btn btn-primary" onclick="showAddModal()">+ Adauga Vehicul</button>
+        </div>
+
+        <div class="filter-bar">
+            <button class="btn btn-filter active" onclick="filterVehicles('all')">Toate</button>
+            <button class="btn btn-filter" onclick="filterVehicles('Car')">Masini</button>
+            <button class="btn btn-filter" onclick="filterVehicles('Truck')">Camioane</button>
+            <button class="btn btn-filter" onclick="filterVehicles('Motorcycle')">Motociclete</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Tip</th>
+                    <th>An</th>
+                    <th>Numar</th>
+                    <th>Tarif/zi</th>
+                    <th>Status</th>
+                    <th>Actiuni</th>
+                </tr>
+            </thead>
+            <tbody id="vehiclesTable"></tbody>
+        </table>
+    </div>
+
+    <!-- Modal Adauga Vehicul -->
+    <div id="addModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Adauga Vehicul</h2>
+                <button onclick="hideModal()" class="close-btn">✕</button>
+            </div>
+
+            <div class="tab-bar">
+                <button class="tab active" onclick="switchTab('car')">Masina</button>
+                <button class="tab" onclick="switchTab('truck')">Camion</button>
+                <button class="tab" onclick="switchTab('motorcycle')">Motocicleta</button>
+            </div>
+
+            <!-- Car Form -->
+            <div id="carForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Brand</label>
+                        <input type="text" id="carBrand" placeholder="Toyota">
+                    </div>
+                    <div class="form-group">
+                        <label>Model</label>
+                        <input type="text" id="carModel" placeholder="Corolla">
+                    </div>
+                    <div class="form-group">
+                        <label>An</label>
+                        <input type="number" id="carYear" value="2023">
+                    </div>
+                    <div class="form-group">
+                        <label>Numar inmatriculare</label>
+                        <input type="text" id="carPlate" placeholder="ABC123">
+                    </div>
+                    <div class="form-group">
+                        <label>Combustibil</label>
+                        <select id="carFuel">
+                            <option>Petrol</option>
+                            <option>Diesel</option>
+                            <option>Electric</option>
+                            <option>Hybrid</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tarif/zi (MDL)</label>
+                        <input type="number" id="carRate" value="200">
+                    </div>
+                    <div class="form-group">
+                        <label>Usi</label>
+                        <input type="number" id="carDoors" value="4">
+                    </div>
+                    <div class="form-group">
+                        <label>Transmisie</label>
+                        <select id="carTransmission">
+                            <option>Automatic</option>
+                            <option>Manual</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Aer conditionat</label>
+                        <select id="carAC">
+                            <option value="true">Da</option>
+                            <option value="false">Nu</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="addCar()">Adauga Masina</button>
+            </div>
+
+            <!-- Truck Form -->
+            <div id="truckForm" class="hidden">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Brand</label>
+                        <input type="text" id="truckBrand" placeholder="Volvo">
+                    </div>
+                    <div class="form-group">
+                        <label>Model</label>
+                        <input type="text" id="truckModel" placeholder="FH16">
+                    </div>
+                    <div class="form-group">
+                        <label>An</label>
+                        <input type="number" id="truckYear" value="2022">
+                    </div>
+                    <div class="form-group">
+                        <label>Numar inmatriculare</label>
+                        <input type="text" id="truckPlate" placeholder="TRK001">
+                    </div>
+                    <div class="form-group">
+                        <label>Combustibil</label>
+                        <select id="truckFuel">
+                            <option>Diesel</option>
+                            <option>Petrol</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tarif/zi (MDL)</label>
+                        <input type="number" id="truckRate" value="500">
+                    </div>
+                    <div class="form-group">
+                        <label>Capacitate (tone)</label>
+                        <input type="number" id="truckCargo" value="5">
+                    </div>
+                    <div class="form-group">
+                        <label>Permis special</label>
+                        <select id="truckLicense">
+                            <option value="true">Da</option>
+                            <option value="false">Nu</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="addTruck()">Adauga Camion</button>
+            </div>
+
+            <!-- Motorcycle Form -->
+            <div id="motorcycleForm" class="hidden">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Brand</label>
+                        <input type="text" id="motoBrand" placeholder="Honda">
+                    </div>
+                    <div class="form-group">
+                        <label>Model</label>
+                        <input type="text" id="motoModel" placeholder="CBR600">
+                    </div>
+                    <div class="form-group">
+                        <label>An</label>
+                        <input type="number" id="motoYear" value="2023">
+                    </div>
+                    <div class="form-group">
+                        <label>Numar inmatriculare</label>
+                        <input type="text" id="motoPlate" placeholder="MTO001">
+                    </div>
+                    <div class="form-group">
+                        <label>Combustibil</label>
+                        <select id="motoFuel">
+                            <option>Petrol</option>
+                            <option>Electric</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tarif/zi (MDL)</label>
+                        <input type="number" id="motoRate" value="150">
+                    </div>
+                    <div class="form-group">
+                        <label>Tip motocicleta</label>
+                        <select id="motoType">
+                            <option>Sport</option>
+                            <option>Cruiser</option>
+                            <option>Touring</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Motor (CC)</label>
+                        <input type="number" id="motoCC" value="600">
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="addMotorcycle()">Adauga Motocicleta</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/vehicles.js"></script>
+</body>
+</html>
