@@ -5,6 +5,93 @@
     <title>Vehicule - Car Rental System</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
+<!-- Modal Detalii Vehicul -->
+<div id="detailsModal" class="modal hidden">
+    <div class="modal-content modal-large">
+        <div class="modal-header">
+            <h2 id="detailsTitle">Detalii Vehicul</h2>
+            <div id="detailsNav" style="display:flex;align-items:center;gap:10px;"></div>
+            <button onclick="hideDetailsModal()" class="close-btn">✕</button>
+        </div>
+        <div class="details-body">
+           <div class="details-image" id="detailsImageContainer">
+    <img id="detailsImage" src="" alt="Vehicul">
+    <button class="img-arrow img-prev" id="imgPrev" onclick="navigateVehicle(-1)">&#8592;</button>
+    <button class="img-arrow img-next" id="imgNext" onclick="navigateVehicle(1)">&#8594;</button>
+    <div class="img-counter" id="imgCounter"></div>
+</div>
+            <div class="details-info">
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Brand</span>
+                        <span id="detailBrand" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Model</span>
+                        <span id="detailModel" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Tip</span>
+                        <span id="detailType" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">An</span>
+                        <span id="detailYear" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Numar</span>
+                        <span id="detailPlate" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Combustibil</span>
+                        <span id="detailFuel" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Tarif/zi</span>
+                        <span id="detailRate" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Status</span>
+                        <span id="detailStatus" class="detail-value"></span>
+                    </div>
+                </div>
+                <div id="detailsActions" style="margin-top:25px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Inchiriere -->
+<div id="rentModal" class="modal hidden">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Inchiriere Vehicul</h2>
+            <button onclick="hideRentModal()" class="close-btn">✕</button>
+        </div>
+        <p id="rentVehicleName" style="color:#feda6a;font-weight:700;margin-bottom:20px;"></p>
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Client</label>
+                <select id="rentCustomer"></select>
+            </div>
+            <div class="form-group">
+                <label>Data inceput</label>
+                <input type="date" id="rentStartDate">
+            </div>
+            <div class="form-group">
+                <label>Data sfarsit</label>
+                <input type="date" id="rentEndDate">
+            </div>
+            <div class="form-group">
+                <label>Cost estimat</label>
+                <span id="rentCostEstimate" style="color:#feda6a;font-weight:700;font-size:1.1rem;padding-top:8px;display:block;">0 MDL</span>
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="confirmRent()">Confirma Inchirierea</button>
+    </div>
+</div>
+
 <body>
     <nav class="navbar">
         <div class="nav-brand">🚗 Car Rental System</div>

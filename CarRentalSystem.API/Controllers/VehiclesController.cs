@@ -15,17 +15,24 @@ namespace CarRentalSystem.API.Controllers
             _db = db;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            var vehicles = await _db.Vehicles.ToListAsync();
-            return Ok(vehicles.Select(v => new
-            {
-                v.Id, v.Brand, v.Model, v.Year, v.LicensePlate,
-                v.DailyRate, v.VehicleType, v.Status,
-                IsAvailable = v.Status == "Available"
-            }));
-        }
+       [HttpGet]
+public async Task<IActionResult> GetAll()
+{
+    var vehicles = await _db.Vehicles.ToListAsync();
+    return Ok(vehicles.Select(v => new
+    {
+        v.Id,
+        v.Brand,
+        v.Model,
+        v.Year,
+        v.LicensePlate,
+        v.DailyRate,
+        v.FuelType,        // ← adauga asta
+        Type = v.VehicleType,
+        v.Status,
+        IsAvailable = v.Status == "Available"
+    }));
+}
 
         [HttpGet("available")]
         public async Task<IActionResult> GetAvailable()
