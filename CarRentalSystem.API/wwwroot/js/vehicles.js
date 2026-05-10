@@ -4,34 +4,45 @@ let currentFilter = 'all';
 async function loadVehicles() {
     try {
         allVehicles = await apiGet('vehicles');
-        renderVehicles();
+        await renderVehicles();
     } catch (err) {
         showToast('Eroare: ' + err.message, 'error');
     }
 }
 
-function renderVehicles() {
+async function renderVehicles() {
     const filtered = currentFilter === 'all'
         ? allVehicles
         : allVehicles.filter(v => v.type === currentFilter);
 
     const tbody = document.getElementById('vehiclesTable');
-    tbody.innerHTML = filtered.map(v => `
-        <tr>
-            <td>${v.brand}</td>
-            <td>${v.model}</td>
-            <td>${v.type}</td>
-            <td>${v.year}</td>
-            <td>${v.licensePlate}</td>
-            <td><strong>${v.dailyRate} MDL</strong></td>
-            <td>${getStatusBadge(v.status)}</td>
-            <td>
-                ${v.isAvailable
-                    ? `<button class="btn btn-danger btn-sm" onclick="deleteVehicle('${v.id}')">Sterge</button>`
-                    : '<span style="color:#6c757d;font-size:0.85rem">Inchiriat</span>'}
-            </td>
-        </tr>
-    `).join('');
+    tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:20px;">Se incarca pozele...</td></tr>';
+
+    const rows = await Promise.all(filtered.map(async v => {
+        const imgUrl = await getVehicleImage(v.brand, v.model, v.type);
+        return `
+            <tr>
+                <td>
+                    <img src="${imgUrl}" alt="${v.brand} ${v.model}"
+                         style="width:90px;height:55px;object-fit:cover;border-radius:6px;">
+                </td>
+                <td>${v.brand}</td>
+                <td>${v.model}</td>
+                <td>${v.type}</td>
+                <td>${v.year}</td>
+                <td>${v.licensePlate}</td>
+                <td><strong>${v.dailyRate} MDL</strong></td>
+                <td>${getStatusBadge(v.status)}</td>
+                <td>
+                    ${v.isAvailable
+                        ? `<button class="btn btn-danger btn-sm" onclick="deleteVehicle('${v.id}')">Sterge</button>`
+                        : '<span style="color:#6c757d;font-size:0.85rem">Inchiriat</span>'}
+                </td>
+            </tr>
+        `;
+    }));
+
+    tbody.innerHTML = rows.join('');
 }
 
 function filterVehicles(type) {

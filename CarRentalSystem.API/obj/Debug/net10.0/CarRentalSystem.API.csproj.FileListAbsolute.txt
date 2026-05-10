@@ -42,15 +42,10 @@ D:\Proiect TMPPP\CarRentalSystem.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Sw
 D:\Proiect TMPPP\CarRentalSystem.API\bin\Debug\net10.0\CarRentalSystem.API.staticwebassets.runtime.json
 D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\y890660isc-{0}-nhc8i1dpo0-nhc8i1dpo0.gz
 D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\s0lsyjhxxd-{0}-pf47p2qu75-pf47p2qu75.gz
-D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\ul4791yray-{0}-fp34yjwele-fp34yjwele.gz
-D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\g829podggz-{0}-p6a7h6nid7-p6a7h6nid7.gz
 D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\on4lcisjeb-{0}-rsz759f634-rsz759f634.gz
 D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\a48h1ja9t5-{0}-4fynvbjots-4fynvbjots.gz
-D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\7asuri34zp-{0}-redg4vshyj-redg4vshyj.gz
 D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\4jx8rv89ar-{0}-qgd6eciojl-qgd6eciojl.gz
-D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\72yvld11f9-{0}-9mtdizzvow-9mtdizzvow.gz
 D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\vs4c7bsk7o-{0}-4z93kgtare-4z93kgtare.gz
-D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\yhfj4aqs94-{0}-2tsrkx21cl-2tsrkx21cl.gz
 D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\796cpa4u9n-{0}-slne9ffxv4-slne9ffxv4.gz
 D:\Proiect TMPPP\CarRentalSystem.API\bin\Debug\net10.0\Humanizer.dll
 D:\Proiect TMPPP\CarRentalSystem.API\bin\Debug\net10.0\Microsoft.Build.Framework.dll
@@ -167,3 +162,9 @@ D:\Proiect TMPPP\CarRentalSystem.API\bin\Debug\net10.0\runtimes\win-arm\native\e
 D:\Proiect TMPPP\CarRentalSystem.API\bin\Debug\net10.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\Proiect TMPPP\CarRentalSystem.API\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\Proiect TMPPP\CarRentalSystem.API\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\CarRentalSystem.API.sourcelink.json
+D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\g829podggz-{0}-4gnz90iz73-4gnz90iz73.gz
+D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\72yvld11f9-{0}-s0mawlom2f-s0mawlom2f.gz
+D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\yhfj4aqs94-{0}-qp5xkhgv80-qp5xkhgv80.gz
+D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\ul4791yray-{0}-2uaw24t3go-2uaw24t3go.gz
+D:\Proiect TMPPP\CarRentalSystem.API\obj\Debug\net10.0\compressed\7asuri34zp-{0}-zh2xasvvcf-zh2xasvvcf.gz

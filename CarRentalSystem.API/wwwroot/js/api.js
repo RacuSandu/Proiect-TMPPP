@@ -1,4 +1,28 @@
 const API_BASE = 'http://localhost:5071/api';
+const UNSPLASH_KEY = 'BhMjBAXe9NHCwu7JtZP94J1r3pZe_hwXznJnXFkNT7M';
+
+async function getVehicleImage(brand, model, type) {
+    try {
+        const query = `${brand} ${model} ${type} car`;
+        const res = await fetch(
+            `https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&orientation=landscape&client_id=${UNSPLASH_KEY}`
+        );
+        if (!res.ok) return getDefaultImage(type);
+        const data = await res.json();
+        return data.urls.small;
+    } catch {
+        return getDefaultImage(type);
+    }
+}
+
+function getDefaultImage(type) {
+    const defaults = {
+        'Car':        'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400',
+        'Truck':      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400',
+        'Motorcycle': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400'
+    };
+    return defaults[type] || defaults['Car'];
+}
 
 async function apiGet(endpoint) {
     const res = await fetch(`${API_BASE}/${endpoint}`);
