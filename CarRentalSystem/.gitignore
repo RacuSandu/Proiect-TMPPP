@@ -1,0 +1,14 @@
+# Build outputs
+**/bin/
+**/obj/
+
+# Baza de date SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# VS Code
+.vscode/
+
+# User secrets
+**/appsettings.Development.json
