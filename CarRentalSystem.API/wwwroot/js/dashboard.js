@@ -16,7 +16,7 @@ async function loadDashboard() {
         tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:20px;color:#8b8d96;">Se incarca pozele...</td></tr>';
 
         const rows = await Promise.all(available.map(async v => {
-            const imgUrl = await getVehicleImage(v.brand, v.model, v.type || v.vehicleType);
+            const imgUrl = await getVehicleImage(v.brand, v.model, v.type || v.vehicleType, v.year);
             return `
                 <tr>
                     <td><img src="${imgUrl}" alt="${v.brand} ${v.model}"

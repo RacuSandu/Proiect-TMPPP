@@ -13,13 +13,14 @@ async function loadVehicles() {
 async function renderVehicles() {
     const filtered = currentFilter === 'all'
         ? allVehicles
-        : allVehicles.filter(v => v.type === currentFilter);
+        : allVehicles.filter(v => (v.type || v.vehicleType) === currentFilter); // ← fix aici
 
     const tbody = document.getElementById('vehiclesTable');
     tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:20px;">Se incarca pozele...</td></tr>';
 
     const rows = await Promise.all(filtered.map(async v => {
-        const imgUrl = await getVehicleImage(v.brand, v.model, v.type);
+        const type = v.type || v.vehicleType || 'Car';
+        const imgUrl = await getVehicleImage(v.brand, v.model, type, v.year);
         return `
             <tr>
                 <td>
@@ -28,7 +29,7 @@ async function renderVehicles() {
                 </td>
                 <td>${v.brand}</td>
                 <td>${v.model}</td>
-                <td>${v.type}</td>
+                <td>${type}</td>
                 <td>${v.year}</td>
                 <td>${v.licensePlate}</td>
                 <td><strong>${v.dailyRate} MDL</strong></td>
